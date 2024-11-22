@@ -1,0 +1,22 @@
+{
+  "name": "@deno/installer-shell-setup",
+  "version": "0.0.0",
+  "exports": {
+    ".": "./src/main.ts",
+    "./bundled": "./bundled.esm.js"
+  },
+  "tasks": {
+    "bundle": "deno run -A ./bundle.ts"
+  },
+  "license": "../LICENSE",
+  "imports": {
+    "@david/which": "jsr:@david/which@^0.4.1",
+    "@nathanwhit/promptly": "jsr:@nathanwhit/promptly@^0.1.2",
+    "@std/cli": "jsr:@std/cli@^1.0.6",
+    "@std/path": "jsr:@std/path@^1.0.4",
+    "@types/node": "npm:@types/node@*"
+  },
+  "publish": {
+    "exclude": ["./bundle.ts"]
+  }
+}
